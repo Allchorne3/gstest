@@ -91,14 +91,7 @@ p.card-text {
     font-size: 18px;
     letter-spacing: 1.26px;
 }
-  
-.btn-turquoise {
-    background-color: var(--clr-turquoise);
-}
 
-.btn-turquoise:hover {
-    background-color: var(--clr-turquoise-dark);
-}
 /* Utility Classes */
 
 .align-center {
@@ -140,6 +133,16 @@ header.scrolled {
     background-color: var(--clr-white);
     box-shadow: 0 2px 6px 0 rgba(22, 29, 91, .15),
     0 8px 24px 0 rgba(22, 29, 91, .10);
+}
+
+header .btn:hover,
+header.scrolled .btn {
+    background-color: var(--clr-turquoise);
+    color: var(--clr-navy);
+}
+
+header.scrolled .btn:hover {
+    background-color: var(--clr-turquoise-dark);
 }
 
 header .container {
@@ -331,4 +334,87 @@ header .container {
 
 footer {
     padding: 96px 20px;
+}
+
+@media only screen and (max-width: 1250px) {
+    /* .hero__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } */
+    
+    .hero__content--left h1,
+    .hero__content--left p {
+        margin-bottom: 30px;
+    }
+    
+    .hero__content--left p {
+        font-size: 20px;
+        line-height: 1.8;
+        max-width: 480px;
+    }
+    
+    .hero__content--left h1 {
+        font-size: 55px;
+        line-height: 1.1;
+    }
+    
+    .hero__content--right {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+    
+    .hero__content--left h1,
+    .hero__content--left p {
+        margin-bottom: 30px;
+    }
+    
+    .hero__content--left p {
+        font-size: 20px;
+        line-height: 1.8;
+        max-width: 480px;
+    }
+    
+    .hero__content--left {
+        display: grid;
+        justify-content: center;
+    }
+    
+    .hero__content--right {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+    
+    .hero__content--left h1,
+    .hero__content--left p {
+        margin-bottom: 30px;
+    }
+    
+    .hero__content--left p {
+        font-size: 20px;
+        line-height: 1.8;
+        max-width: 480px;
+    }
+    
+    .hero__content--left {
+        display: grid;
+        justify-content: center;
+    }
+    
+    .hero__content--right img {
+        max-width: 100%;
+    }
 }
